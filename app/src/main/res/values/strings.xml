@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MediWheelApp</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="enter_your_details_to_create_account">Enter Your Details to create account</string>
+    <string name="name">Your Name</string>
+    <string name="email_address">Your Personal Email</string>
+    <string name="password">Password</string>
+    <string name="mobile_no">Your Mobile Number</string>
+    <string name="need">Need</string>
+    <string name="let_s_start_discuss_with_us">Let\'s start discuss with us!</string>
+    <string name="medical_help">Medical Help</string>
+    <string name="signin">Sign In</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="getlink">Enter your email/username below to receive your password reset instructions</string>
+    <string name="please_make_new_password">Please make new Password</string>
+    <string name="newpassword">New Password</string>
+    <string name="confirm_password">confirm Password</string>
+    <string name="or_signup_with">Or signup with</string>
+    <string name="already_have_account">Already have Account</string>
+    <string name="control_of_your">Control of your</string>
+    <string name="take">Take</string>
+    <string name="health_wellness"><![CDATA[Health & Wellness]]></string>
+    <string name="corporate_code">Corporate code</string>
+    <string name="login_using_username_password"><![CDATA[Login using Username & Password]]></string>
+</resources>

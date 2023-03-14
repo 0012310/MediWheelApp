@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activities.CreateAccountActivity">
+
+    <include layout="@layout/commontoolbar"></include>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/radioNormalUser"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/btncolordark"
+                        android:checked="true"
+                        android:text="Normal User"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioCorpUser"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/btncolordark"
+                        android:text="Corporate USer"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llcorporate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/etsize"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/edittext"
+                        android:hint="@string/corporate_code"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/paddingstart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/inputsize" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/etsize"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/edittext"
+                        android:hint="Employee code"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/paddingstart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/inputsize" />
+
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/etsize"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/edittext"
+                    android:drawableLeft="@drawable/mobile"
+                    android:drawablePadding="6dp"
+                    android:hint="@string/mobile_no"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingStart="@dimen/paddingstart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/inputsize" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/etsize"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/edittext"
+                    android:drawableLeft="@drawable/name"
+                    android:drawablePadding="6dp"
+                    android:hint="@string/name"
+                    android:paddingStart="@dimen/paddingstart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/inputsize" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/etsize"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/edittextblue"
+                    android:drawableLeft="@drawable/email"
+                    android:drawablePadding="6dp"
+                    android:hint="@string/email_address"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/paddingstart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/inputsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEKyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btnheight"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/btnbackgrounddark"
+                    android:fontFamily="sans-serif"
+                    android:text="Proceed"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

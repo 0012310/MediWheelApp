@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titlesize">26sp</dimen>
+    <dimen name="titlesizem">20sp</dimen>
+
+    <dimen name="subtitlesize">16sp</dimen>
+    <dimen name="inputsize">16sp</dimen>
+    <dimen name="inputsizesm">14sp</dimen>
+    <dimen name="paddingstart">16dp</dimen>
+    <dimen name="etsize">52dp</dimen>
+    <dimen name="etsizesm">40dp</dimen>
+    <dimen name="btnheight">52dp</dimen>
+</resources>

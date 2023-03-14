@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitebg"
+    android:orientation="vertical"
+    tools:context=".Activities.SignupActivity">
+
+
+    <include layout="@layout/commontoolbar">
+
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="start"
+            android:src="@drawable/logo"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/etsize"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edittext"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/paddingstart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/inputsize" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/etsize"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edittext"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/paddingstart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/inputsize" />
+
+        <TextView
+            android:id="@+id/forgotTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="end"
+            android:text="@string/forgot_password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subtitlesize">
+
+        </TextView>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEKyc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btnheight"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/btnbackgrounddark"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitebg"
+    tools:context=".Activities.ChangePasswordActivity">
+
+    <include
+        layout="@layout/commontoolbar">
+
+    </include>
+
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:text="@string/please_make_new_password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/subtitlesize">
+
+        </TextView>
+
+
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/etsize"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edittext"
+            android:hint="@string/newpassword"
+            android:paddingStart="@dimen/paddingstart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/inputsize" />
+
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/etsize"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edittext"
+            android:hint="@string/confirm_password"
+            android:paddingStart="@dimen/paddingstart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/inputsize" />
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btncChangepass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btnheight"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/btnbackgrounddark"
+            android:text="Change"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
