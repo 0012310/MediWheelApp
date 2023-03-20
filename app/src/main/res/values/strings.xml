@@ -23,4 +23,5 @@
     <string name="health_wellness"><![CDATA[Health & Wellness]]></string>
     <string name="corporate_code">Corporate code</string>
     <string name="login_using_username_password"><![CDATA[Login using Username & Password]]></string>
+    <string name="_1800"><strike>1800 </strike> </string>
 </resources>

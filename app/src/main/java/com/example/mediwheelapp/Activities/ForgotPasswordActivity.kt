@@ -25,8 +25,8 @@ class ForgotPasswordActivity : AppCompatActivity() {
         }
         btncChangepass=findViewById(R.id.btncChangepass)
         btncChangepass.setOnClickListener {
-            val intent = Intent(this,ChangePasswordActivity::class.java)
-            startActivity(intent)
+          /*  val intent = Intent(this,ChangePasswordActivity::class.java)
+            startActivity(intent)*/
         }
     }
 }

@@ -155,7 +155,7 @@
                 android:gravity="center">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnEKyc"
+                    android:id="@+id/btnProceed"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/btnheight"
                     android:layout_marginStart="20dp"
