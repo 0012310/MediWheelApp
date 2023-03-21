@@ -24,4 +24,7 @@
     <string name="corporate_code">Corporate code</string>
     <string name="login_using_username_password"><![CDATA[Login using Username & Password]]></string>
     <string name="_1800"><strike>1800 </strike> </string>
+    <string name="create_4_digit_lock">Create 4 digit lock</string>
+    <string name="confirm_your_code">Confirm Your Code</string>
+    <string name="pinInvalid">In Valid Pin</string>
 </resources>

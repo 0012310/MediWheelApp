@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,17 +10,9 @@
     tools:context=".Activities.CreateAndSignInActivity">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
 
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -30,7 +24,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_weight=".8">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -62,124 +56,136 @@
                 </LinearLayout>
 
 
-                <LinearLayout
+                <ScrollView
+                    android:fillViewport="true"
+                    android:layout_weight="1.2"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
+                    android:layout_height="0dp">
                     <LinearLayout
-                        android:id="@+id/llEditGroup"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
                         android:orientation="vertical">
 
-
-                        <TextView
-                            android:id="@+id/et1"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/etsizesm"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="20dp"
-                            android:background="@drawable/edittext"
-                            android:drawableLeft="@drawable/mobile"
-                            android:drawablePadding="6dp"
-                            android:gravity="center_vertical"
-                            android:hint="Enter Mobile Number"
-                            android:inputType="none"
-                            android:paddingStart="@dimen/paddingstart"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/inputsizesm" />
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/etsize"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="20dp"
+                                android:background="@drawable/edittextblue"
+                                android:drawableLeft="@drawable/mobile"
+                                android:drawablePadding="6dp"
+                                android:hint="@string/mobile_no"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:paddingStart="@dimen/paddingstart"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/inputsize" />
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/etsize"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="20dp"
+                                android:background="@drawable/edittextblue"
+                                android:drawableLeft="@drawable/name"
+                                android:drawablePadding="6dp"
+                                android:hint="@string/name"
+                                android:paddingStart="@dimen/paddingstart"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/inputsize" />
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/etsize"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="20dp"
+                                android:background="@drawable/edittextblue"
+                                android:drawableLeft="@drawable/email"
+                                android:drawablePadding="6dp"
+                                android:hint="@string/email_address"
+                                android:inputType="textEmailAddress"
+                                android:paddingStart="@dimen/paddingstart"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/inputsize" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnProceed"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/btnheight"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:background="@drawable/btnbackgrounddark"
+                                android:fontFamily="sans-serif"
+                                android:text="Proceed"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/tvCorporate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center"
+                                android:text="I have a Corporate Account"
+                                android:textColor="@color/bluenew"
+                                android:textSize="@dimen/inputsizesm">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:textSize="@dimen/inputsizesm">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="By signing in you agree to our"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/inputsizesm">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/tv2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:textSize="@dimen/inputsizesm">
+
+                            </TextView>
+
+                        </LinearLayout>
 
 
-                        <TextView
-                            android:id="@+id/et2"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/etsizesm"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginEnd="20dp"
-                            android:background="@drawable/edittext"
-                            android:drawableLeft="@drawable/name"
-                            android:drawablePadding="6dp"
-                            android:gravity="center_vertical"
-                            android:hint="Your Name"
-                            android:inputType="none"
-                            android:paddingStart="@dimen/paddingstart"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/inputsizesm" />
 
-                        <TextView
-                            android:id="@+id/et3"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/etsizesm"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginEnd="20dp"
-                            android:background="@drawable/edittext"
-                            android:drawableLeft="@drawable/email"
-                            android:drawablePadding="6dp"
-                            android:gravity="center_vertical"
-                            android:hint="Your Personal Email"
-                            android:inputType="none"
-                            android:paddingStart="@dimen/paddingstart"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/inputsizesm" />
+
+
 
                     </LinearLayout>
+                </ScrollView>
 
-
-                    <TextView
-                        android:id="@+id/tvCorporate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:gravity="center"
-                        android:text="I have a Corporate Account"
-                        android:textColor="@color/bluenew"
-                        android:textSize="@dimen/inputsizesm">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/tv"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:textSize="@dimen/inputsizesm">
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:gravity="center"
-                        android:text="By signing in you agree to our"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/inputsizesm">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/tv2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:textSize="@dimen/inputsizesm">
-
-                    </TextView>
-
-                </LinearLayout>
 
             </LinearLayout>
 
-        </ScrollView>
 
 
-    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
