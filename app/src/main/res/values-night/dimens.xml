@@ -6,4 +6,7 @@
     <dimen name="paddingstart">16dp</dimen>
     <dimen name="etsize">48dp</dimen>
     <dimen name="btnheight">52dp</dimen>
+    <dimen name="tvLoginPINEnter">20sp</dimen>
+    <dimen name="edtLoginPIN1Left">20dp</dimen>
+    <dimen name="edtLoginPIN1">18sp</dimen>
 </resources>

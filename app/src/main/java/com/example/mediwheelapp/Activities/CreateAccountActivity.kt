@@ -51,6 +51,7 @@ class CreateAccountActivity : AppCompatActivity() {
         btnProceed.setOnClickListener {
             val intent = Intent(this,DashBoradActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
 

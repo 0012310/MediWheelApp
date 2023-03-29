@@ -27,4 +27,13 @@
     <string name="create_4_digit_lock">Create 4 digit lock</string>
     <string name="confirm_your_code">Confirm Your Code</string>
     <string name="pinInvalid">In Valid Pin</string>
+    <string name="tvLoginCPINEnter">Confirm your PIN</string>
+    <string name="reset_code">Reset PIN</string>
+    <string name="pleaseWait">Please wait.</string>
+    <string name="resetCodeMessage">Reset Pin</string>
+    <string name="btnMainActivityLogout">LogOut</string>
+    <string name="btnCstAlertDigCancel">Cancel</string>
+    <string name="tvLoginPINEnter">Enter Your Pin</string>
+    <string name="navigation_drawer_open">Open navigation Drawer</string>
+    <string name="navigation_drawer_close">Close navigation Drawer</string>
 </resources>

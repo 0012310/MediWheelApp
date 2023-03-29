@@ -7,7 +7,9 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mediwheelapp.Activities.securitypin.SharedPreferenceUtils
 import com.example.mediwheelapp.R
 
 
@@ -16,15 +18,16 @@ class OTPVerify : AppCompatActivity() {
     lateinit var etTwo: EditText
     lateinit var etThree: EditText
     lateinit var etFour: EditText
-
-
-
-
-
     lateinit var btnVerify: Button
+    var requiredPIN = ""
+
+
+    private lateinit var sharedPreferences: SharedPreferenceUtils
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otpverify)
+        sharedPreferences = SharedPreferenceUtils.getInstance(this)
         etOne = findViewById(R.id.etOne)
         etTwo = findViewById(R.id.etTwo)
         etThree = findViewById(R.id.etThree)
@@ -138,8 +141,17 @@ class OTPVerify : AppCompatActivity() {
         })
         btnVerify = findViewById(R.id.btnVerify)
         btnVerify.setOnClickListener {
-            val intent = Intent(this, CreatePin::class.java)
-            startActivity(intent)
+            requiredPIN =
+                etOne.text.toString() + etTwo.text.toString() + etThree.text.toString() + etFour.text.toString()
+            if (requiredPIN != null) {
+                if (requiredPIN.length == 4) {
+                    val intent = Intent(this, CreatePin::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Toast.makeText(this, "Please enter valid otp first", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 

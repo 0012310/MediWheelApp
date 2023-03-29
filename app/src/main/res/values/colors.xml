@@ -21,10 +21,7 @@
     <color name="transparent">#99FFFFFF</color>
 
     <color name="otpbgfilled">#CC1A4C</color>
-
-
-
-
+    <color name="lightGrey">#ededed</color>
 
 
 </resources>

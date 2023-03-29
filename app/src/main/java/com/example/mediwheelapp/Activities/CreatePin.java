@@ -6,14 +6,14 @@ import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.mediwheelapp.Activities.securitypin.SharedPreferenceUtils;
 import com.example.mediwheelapp.R;
+
 
 public class CreatePin extends AppCompatActivity {
     private EditText etPin1, etPin2, etPin3, etPin4;
@@ -22,12 +22,15 @@ public class CreatePin extends AppCompatActivity {
 
     Button btnReset, btnSubmit;
 
+    SharedPreferenceUtils sharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_pin);
         init();
+        sharedPreferences = SharedPreferenceUtils.getInstance(this);
     }
 
     private void init() {
@@ -186,7 +189,6 @@ public class CreatePin extends AppCompatActivity {
         });
 
 
-
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -200,11 +202,11 @@ public class CreatePin extends AppCompatActivity {
     private void checkCondition() {
         if (requiredPIN != null) {
             if (requiredPIN.length() == 4) {
-                if (requiredPIN.matches(
-                        "[0-9]+")) {
+                if (requiredPIN.matches("[0-9]+")) {
                     if (confirmPin.equals(requiredPIN)) {
-                        Intent intent = new Intent(this,DashBoradActivity.class);
-                        startActivity(intent);
+                        sharedPreferences.setStringValue("SecurityPin", requiredPIN);
+                        sharedPreferences.setValue("isUserLogin", true);
+                        startActivity(new Intent(this, DashBoradActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                     } else {
                         Toast.makeText(CreatePin.this, "In Valid PIN", Toast.LENGTH_SHORT).show();
                     }
@@ -213,6 +215,8 @@ public class CreatePin extends AppCompatActivity {
 
                 }
             }
+        } else {
+            Toast.makeText(CreatePin.this, "Please Enter valid pin first", Toast.LENGTH_SHORT).show();
         }
     }
 }

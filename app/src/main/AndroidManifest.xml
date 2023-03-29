@@ -12,6 +12,9 @@
         android:theme="@style/Theme.MediWheelApp"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.securitypin.EnterSecurityPinActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.CreatePin"
             android:exported="false" />
         <activity
