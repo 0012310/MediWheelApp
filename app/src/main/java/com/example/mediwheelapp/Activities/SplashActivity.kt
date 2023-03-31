@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mediwheelapp.Activities.securitypin.EnterSecurityPinActivity
-import com.example.mediwheelapp.Activities.securitypin.SharedPreferenceUtils
+import com.example.mediwheelapp.securitypin.EnterSecurityPinActivity
+import com.example.mediwheelapp.securitypin.SharedPreferenceUtils
 import com.example.mediwheelapp.R
 
 class SplashActivity : AppCompatActivity() {
@@ -67,4 +67,7 @@ class SplashActivity : AppCompatActivity() {
 
         }
     }
+
+
+
 }

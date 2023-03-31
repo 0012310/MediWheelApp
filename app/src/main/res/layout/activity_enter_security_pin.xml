@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgroundscreennew"
     android:orientation="vertical"
-    tools:context=".Activities.securitypin.EnterSecurityPinActivity">
+    tools:context=".securitypin.EnterSecurityPinActivity">
    
    
 

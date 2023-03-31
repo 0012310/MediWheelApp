@@ -1,4 +1,4 @@
-package com.example.mediwheelapp.Activities.securitypin;
+package com.example.mediwheelapp.securitypin;
 
 
 import android.app.Application;

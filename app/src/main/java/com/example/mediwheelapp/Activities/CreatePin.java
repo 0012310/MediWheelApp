@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.mediwheelapp.Activities.securitypin.SharedPreferenceUtils;
+import com.example.mediwheelapp.securitypin.SharedPreferenceUtils;
 import com.example.mediwheelapp.R;
 
 
@@ -207,6 +207,7 @@ public class CreatePin extends AppCompatActivity {
                         sharedPreferences.setStringValue("SecurityPin", requiredPIN);
                         sharedPreferences.setValue("isUserLogin", true);
                         startActivity(new Intent(this, DashBoradActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                        finish();
                     } else {
                         Toast.makeText(CreatePin.this, "In Valid PIN", Toast.LENGTH_SHORT).show();
                     }

@@ -5,15 +5,18 @@ import android.graphics.PorterDuff
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mediwheelapp.Activities.securitypin.SharedPreferenceUtils
+import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.mediwheelapp.securitypin.SharedPreferenceUtils
 import com.example.mediwheelapp.R
 
 
 class OTPVerify : AppCompatActivity() {
+    private lateinit var progressLayout: ConstraintLayout
     lateinit var etOne: EditText
     lateinit var etTwo: EditText
     lateinit var etThree: EditText
@@ -27,6 +30,7 @@ class OTPVerify : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otpverify)
+        progressLayout = findViewById(R.id.progressLayout)
         sharedPreferences = SharedPreferenceUtils.getInstance(this)
         etOne = findViewById(R.id.etOne)
         etTwo = findViewById(R.id.etTwo)
@@ -147,6 +151,7 @@ class OTPVerify : AppCompatActivity() {
                 if (requiredPIN.length == 4) {
                     val intent = Intent(this, CreatePin::class.java)
                     startActivity(intent)
+                    showProgressDialog()
                     finish()
                 } else {
                     Toast.makeText(this, "Please enter valid otp first", Toast.LENGTH_SHORT).show()
@@ -154,6 +159,16 @@ class OTPVerify : AppCompatActivity() {
             }
         }
     }
+
+    private fun dismissProgressDialog() {
+        progressLayout.visibility = View.GONE
+    }
+
+    private fun showProgressDialog() {
+        progressLayout.visibility = View.VISIBLE
+    }
+
+
 
 
 }

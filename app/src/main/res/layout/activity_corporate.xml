@@ -1,130 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical"
-    android:weightSum="2.2"
     tools:context=".Activities.CorporateActivity">
 
-    <include layout="@layout/commontoolbar"></include>
-
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".2"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:gravity="start"
-            android:text="Link your Corporate Account"
-            android:textColor="@color/bluenDark"
-            android:textSize="@dimen/titlesizem">
+        <include
 
-        </TextView>
+            layout="@layout/commontoolbar">
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="vertical">
+        </include>
 
         <LinearLayout
-            android:id="@+id/llEditGroup"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
             android:orientation="vertical">
 
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/etsize"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/edittext"
-                android:drawableLeft="@drawable/email"
-                android:drawablePadding="6dp"
-                android:hint="Enter Corporate Email ID"
-                android:inputType="textPassword"
-                android:paddingStart="@dimen/paddingstart"
-                android:textColor="@color/black"
-                android:textSize="@dimen/inputsizesm" />
-
-            <TextView
+            <LinearLayout
+                android:id="@+id/llEditGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
-                android:gravity="start"
-                android:text="OTP will be shared on the above email"
-                android:textColor="@color/dull"
-                android:textSize="@dimen/inputsizesm">
-
-            </TextView>
+                android:orientation="vertical">
 
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnEKyc"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/btnheight"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/btnbackgroundfade"
-                android:text="Get OTP"
-                android:textAllCaps="false"
-                android:textColor="@color/white" />
+                <EditText
+                    android:id="@+id/etEmailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/etsize"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/edittext"
+                    android:drawableLeft="@drawable/email"
+                    android:drawablePadding="6dp"
+                    android:hint="Enter Corporate Email ID"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/paddingstart"
+                    android:paddingEnd="@dimen/paddingstart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/inputsizesm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:text="OTP will be shared on the above email"
+                    android:textColor="@color/bluenew"
+                    android:textSize="@dimen/inputsizesm">
+
+                </TextView>
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:text="OR"
-                android:textSize="@dimen/inputsizesm">
-
-            </TextView>
-
-
-            <TextView
-                android:id="@+id/tvlogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:gravity="center"
-                android:text="@string/login_using_username_password"
-                android:textColor="@color/bluenew"
-                android:textSize="@dimen/inputsizesm">
-
-            </TextView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnGetOTP"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btnheight"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/btnbackgroundfade"
+                    android:text="Get OTP"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
 
 
-            <TextView
-                android:id="@+id/tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:textSize="@dimen/inputsize">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="OR"
+                    android:textColor="@color/bluenew"
+                    android:textSize="@dimen/inputsizesm">
 
-            </TextView>
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/tvlogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="@string/login_using_username_password"
+                    android:textColor="@color/bluenew"
+                    android:textSize="@dimen/inputsizesm">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/inputsize">
+
+                </TextView>
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
 
-
     </LinearLayout>
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:minHeight="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,16 +6,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.cardview.widget.CardView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import com.example.mediwheelapp.Activities.securitypin.SharedPreferenceUtils
+import com.example.mediwheelapp.securitypin.SharedPreferenceUtils
 import com.example.mediwheelapp.ActivityWithRecyclerView.ExecutiveHealthPackageActivity
 import com.example.mediwheelapp.R
 import com.google.android.material.navigation.NavigationView
+import org.w3c.dom.Text
 
 class DashBoradActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var sharedPreferences: SharedPreferenceUtils
@@ -23,6 +26,10 @@ class DashBoradActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
     lateinit var cardViewHealtPathology: CardView
     private lateinit var imgDrawer: ImageView
     private lateinit var imgLogout: ImageView
+
+    lateinit var tvName: TextView
+    lateinit var tvMobile: TextView
+    lateinit var tvEmailId: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dash_borad)
@@ -61,6 +68,24 @@ class DashBoradActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             val intent = Intent(this, ExecutiveHealthPackageActivity::class.java)
             startActivity(intent)
         }
+        cardViewHealtPathology.setOnClickListener {
+            val intent = Intent(this, ExecutiveHealthPackageActivity::class.java)
+            startActivity(intent)
+        }
+
+        tvName = headerView.findViewById(R.id.tvName)
+        tvMobile = headerView.findViewById(R.id.tvMobile)
+        tvEmailId = headerView.findViewById(R.id.tvEmailId)
+
+
+        var Name = sharedPreferences.getStringValue("Name", "")
+        var Mobile = sharedPreferences.getStringValue("Mobile", "")
+        var Email = sharedPreferences.getStringValue("Email", "")
+
+        tvName.text = Name
+        tvMobile.text = Mobile
+        tvEmailId.text = Email
+
     }
 
     private fun logOut() {

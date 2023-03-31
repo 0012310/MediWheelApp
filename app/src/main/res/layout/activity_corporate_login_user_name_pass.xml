@@ -1,147 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Activities.CorporateLoginUserNamePass">
 
-    <RelativeLayout
-        android:background="@color/bluenew"
-        android:layout_width="match_parent"
-        android:layout_height="46dp">
-
-        <ImageView
-            android:layout_centerVertical="true"
-            android:layout_marginStart="6dp"
-            android:id="@+id/imgback"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/backiconwhite" />
-
-        <TextView
-            android:textColor="@color/white"
-            android:textSize="@dimen/subtitlesize"
-            android:textStyle="normal"
-            android:id="@+id/tvTitle"
-            android:text="Login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:text="Logout"
-            android:visibility="gone" />
-
-    </RelativeLayout
->
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="20dp"
-            android:gravity="start"
-            android:text="Glad to see you!"
-            android:textColor="@color/bluenDark"
-            android:textSize="@dimen/titlesizem">
+            android:layout_height="46dp"
+            android:background="@color/bluenew">
 
-        </TextView>
+            <ImageView
+                android:id="@+id/imgback"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/backiconwhite" />
 
-        <TextView
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/subtitlesize"
+                android:textStyle="normal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="Logout"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:gravity="start"
-            android:text="Login in your Mediwheel account"
-            android:textColor="@color/black"
-            android:textSize="@dimen/inputsizesm">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="start"
+                android:text="Glad to see you!"
+                android:textColor="@color/bluenDark"
+                android:textSize="@dimen/titlesizem">
 
+            </TextView>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="20dp"
-            android:gravity="start"
-            android:text="Register Email Id/Username"
-            android:textColor="@color/black"
-            android:textSize="@dimen/inputsizesm">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Login in your Mediwheel account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/inputsizesm">
 
-        </TextView>
-
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/etsize"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/edittextblue"
-            android:hint="Enter Corporate Email ID"
-            android:inputType="textPassword"
-            android:paddingStart="@dimen/paddingstart"
-            android:textColor="@color/black"
-            android:textSize="@dimen/inputsizesm" />
-
-        <TextView
-            android:id="@+id/tvforgotpass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:gravity="end"
-            android:text="Forgot Password?"
-            android:textColor="@color/bluenew"
-            android:textSize="@dimen/inputsize">
-
-        </TextView>
+            </TextView>
 
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="start"
+                android:text="Register Email Id/Username"
+                android:textColor="@color/black"
+                android:textSize="@dimen/inputsizesm">
+
+            </TextView>
 
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_gravity="bottom"
-            android:id="@+id/btnEKyc"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/btnheight"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/btnbackground"
-            android:text="Proceed"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
+            <EditText
+                android:id="@+id/etEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/etsize"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edittextblue"
+                android:hint="Enter Corporate Email ID"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/paddingstart"
+                android:paddingEnd="@dimen/paddingstart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/inputsizesm" />
+
+            <TextView
+                android:id="@+id/tvforgotpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="end"
+                android:text="Forgot Password?"
+                android:textColor="@color/bluenew"
+                android:textSize="@dimen/inputsize">
+
+            </TextView>
 
 
-        <TextView
-            android:id="@+id/tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:textSize="@dimen/inputsizesm">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnProcess"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btnheight"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/btnbackground"
+                android:text="Proceed"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
-        </TextView>
 
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textSize="@dimen/inputsizesm">
+
+            </TextView>
+
+
+        </LinearLayout>
 
 
     </LinearLayout>
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:minHeight="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

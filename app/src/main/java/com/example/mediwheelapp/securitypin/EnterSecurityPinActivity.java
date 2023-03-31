@@ -1,10 +1,9 @@
-package com.example.mediwheelapp.Activities.securitypin;
+package com.example.mediwheelapp.securitypin;
 
-import android.app.Application;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
@@ -20,14 +19,7 @@ import com.example.mediwheelapp.Activities.CreateAndSignInActivity;
 import com.example.mediwheelapp.Activities.TextChangedListener;
 import com.example.mediwheelapp.R;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-
-import java.util.HashMap;
-import java.util.Map;
-
-public class EnterSecurityPinActivity extends AppCompatActivity {
+public class EnterSecurityPinActivity extends AuthenticateFingerPrint {
     private static final String TAG = "EnterSecurityPinActivit";
     private EditText edtLoginPIN1, edtLoginPIN2, edtLoginPIN3, edtLoginPIN4;
     private String pin1 = "", pin2 = "", pin3 = "", pin4 = "", requiredPIN;
@@ -51,8 +43,11 @@ public class EnterSecurityPinActivity extends AppCompatActivity {
         progressDialog.setCanceledOnTouchOutside(false);
         sharedPreferenceUtils = SharedPreferenceUtils.getInstance(this);
 
-
         init();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            authintecate(this);
+        }
 
     }
 

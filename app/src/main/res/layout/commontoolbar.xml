@@ -20,7 +20,7 @@
             android:src="@drawable/backicon" />
 
         <TextView
-            android:textColor="@color/black"
+            android:textColor="@color/bluenew"
             android:textSize="@dimen/subtitlesize"
             android:textStyle="normal"
             android:id="@+id/tvTitle"
