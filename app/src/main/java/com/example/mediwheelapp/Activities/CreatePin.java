@@ -206,7 +206,8 @@ public class CreatePin extends AppCompatActivity {
                     if (confirmPin.equals(requiredPIN)) {
                         sharedPreferences.setStringValue("SecurityPin", requiredPIN);
                         sharedPreferences.setValue("isUserLogin", true);
-                        startActivity(new Intent(this, DashBoradActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                        Intent intent = new Intent(this, DashBoradActivity.class);
+                        startActivity(intent);
                         finish();
                     } else {
                         Toast.makeText(CreatePin.this, "In Valid PIN", Toast.LENGTH_SHORT).show();

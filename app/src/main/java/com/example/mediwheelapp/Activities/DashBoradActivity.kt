@@ -77,14 +77,20 @@ class DashBoradActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         tvMobile = headerView.findViewById(R.id.tvMobile)
         tvEmailId = headerView.findViewById(R.id.tvEmailId)
 
+        if (sharedPreferences.getContainsKey("Name") && sharedPreferences.getContainsKey("Mobile") && sharedPreferences.getContainsKey(
+                "Email"
+            )
+        ) {
+            var Name = sharedPreferences.getStringValue("Name", "")
+            var Mobile = sharedPreferences.getStringValue("Mobile", "")
+            var Email = sharedPreferences.getStringValue("Email", "")
 
-        var Name = sharedPreferences.getStringValue("Name", "")
-        var Mobile = sharedPreferences.getStringValue("Mobile", "")
-        var Email = sharedPreferences.getStringValue("Email", "")
+            tvName.text = Name
+            tvMobile.text = Mobile
+            tvEmailId.text = Email
 
-        tvName.text = Name
-        tvMobile.text = Mobile
-        tvEmailId.text = Email
+        }
+
 
     }
 
@@ -108,5 +114,24 @@ class DashBoradActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
         drawer.closeDrawer(GravityCompat.START)
         return true
+    }
+
+
+    override fun onBackPressed() {
+        callBackAlertDialog()
+    }
+
+    private fun callBackAlertDialog() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("MediWheel")
+        builder.setMessage("Do you want to Exit from MediWheel App?")
+        builder.setPositiveButton("Yes") { dialog, which ->
+            finish()
+        }
+
+        builder.setNegativeButton("No") { dialog, which ->
+        }
+
+        builder.show()
     }
 }

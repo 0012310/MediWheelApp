@@ -47,9 +47,9 @@ class CreateAccountActivity : AppCompatActivity() {
             }
         }
 
-        btnProceed=findViewById(R.id.btnProceed)
+        btnProceed = findViewById(R.id.btnProceed)
         btnProceed.setOnClickListener {
-            val intent = Intent(this,DashBoradActivity::class.java)
+            val intent = Intent(this, DashBoradActivity::class.java)
             startActivity(intent)
             finish()
         }

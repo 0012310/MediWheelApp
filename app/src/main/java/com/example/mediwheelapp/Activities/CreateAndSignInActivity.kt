@@ -63,7 +63,6 @@ class CreateAndSignInActivity : AppCompatActivity() {
         mViewPager!!.adapter = mViewPagerAdapter
         dotsIndicator.setViewPager(mViewPager!!)
         tvCorporate.setOnClickListener {
-
             val intent = Intent(this, CorporateActivity::class.java)
             startActivity(intent)
         }

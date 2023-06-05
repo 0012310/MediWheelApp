@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 
-
 public class SharedPreferenceUtils extends Application {
     private static SharedPreferenceUtils mSharedPreferenceUtils;
     protected Context mContext;
@@ -51,8 +50,6 @@ public class SharedPreferenceUtils extends Application {
     }
 
 
-
-
     public String getStringValue(String key, String defaultValue) {
         return mSharedPreferences.getString(key, defaultValue);
     }
@@ -66,7 +63,6 @@ public class SharedPreferenceUtils extends Application {
     public long getLongValue(String key, long defaultValue) {
         return mSharedPreferences.getLong(key, defaultValue);
     }
-
 
 
     public void removeKey(String key) {
@@ -88,8 +84,6 @@ public class SharedPreferenceUtils extends Application {
         mSharedPreferencesEditor.putBoolean(key, value);
         mSharedPreferencesEditor.commit();
     }
-
-
 
 
 }
